@@ -106,7 +106,7 @@ or:
 Version
 -------
 
-This version of PyWBEM is 0.8.0~dev.
+This version of PyWBEM is 3.8.0~dev.
 
 The version number follows these conventions:
 
@@ -143,7 +143,7 @@ See the `LICENSE.txt <../LICENSE.txt>`_ file.
 
 # Version of the pywbem package
 # !!! Keep in sync with version stated in module docstring, above !!!
-__version__ = '0.8.0~dev'
+__version__ = '3.8.0~dev'
 
 # There are submodules, but clients shouldn't need to know about them.
 # Importing just this module is enough.
