@@ -3,6 +3,10 @@ python3-pywbem
 
 This is a fork of PyWBEM for Python 2.6+ and Python 3.4+
 
+License
+-------
+LGPL 2.1 (original PyWBEM license)
+
 Motivation
 ----------
 When working with WBEM/CIM and Python, PyWBEM is the only library available. Even libraries like PowerCIM use PyWBEM under the hood. Unfortunately, PyWBEM only supports the Python 2.x series and carries a heavy dependency, M2Crypto, that is difficult to install on platforms other than Linux. Worse yet, this dependency is also restricted to the Python 2.x series. There have been some efforts to update M2Crypto for Python 3, but none seem to be in a fully working state.
