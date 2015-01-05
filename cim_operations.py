@@ -360,9 +360,6 @@ class WBEMConnection(object):
 
         # Build XML request
 
-        #req_xml = minidom.getDOMImplementation().createDocument(None, 'CIM', None)
-        #req_xml.createElement()
-
         req_xml = cim_xml.CIM(
             cim_xml.MESSAGE(
                 cim_xml.SIMPLEREQ(
