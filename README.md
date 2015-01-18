@@ -1,7 +1,9 @@
 python3-pywbem
 ==============
 
-This is a fork of PyWBEM for Python 2.6+ and Python 3.4+
+This is a fork of PyWBEM for Python 2.6+ and Python 3.4+ that aims to remain 100% compatible with PyWBEM as a drop-in replacement.
+
+There is another WBEM/CIM library I wrote from scratch that should be used if new features and functionality are desired. This new library is the one I am using on a daily basis, mostly for it's simplicity and small code base. You can check it out here: https://github.com/deejross/python3-wbem
 
 License
 -------
@@ -80,6 +82,11 @@ Q: Why isn't Python 3.3 (or 3.2) supported?
 A: Python's `ssl` module got an update for 3.4 that made it more secure. Specifically, adding the `create_default_context` function which sets some sane defaults depending on the environment.
 
 
+Q: Don't you want to make this library better than the original by adding features that don't exist in the original PyWBEM?
+
+A: Yes and No. I want this library to be a complete drop-in replacement for PyWBEM for those of us on modern platforms. However, I started a new WBEM/CIM library from scratch that is completely separate from PyWBEM. This is where new development is taking place: https://github.com/deejross/python3-wbem
+
+
 Q: How difficult was it to port PyWBEM to Python 3 while maintaining Python 2.6+ compatibility?
 
 A: Short answer: more difficult than I'd hoped. From what I can tell, PyWBEM supports Python 2.3+ (maybe even earlier releases). That meant a lot of the code was calling deprecated methods even by Python 2.6 standards. I'm not going to lie, the conversion of `NocaseDict` was the cause of many problems during testing and I can't tell you how many `has_key` calls needed to be converted to the more modern `in` syntax.
@@ -88,10 +95,10 @@ A: Short answer: more difficult than I'd hoped. From what I can tell, PyWBEM sup
 Future Enhancements
 -------------------
 * If I have time, I will try to keep up with the official PyWBEM repo on SourceForge and make updates when needed
-* PyWBEM's implementation is kind of a mess and not very friendly to use. If I have the time/motivation, I may try to create a higher-level helper class to make things easier to use.
+
 
 Contributions
 -------------
-Did you see something in the FAQ or the Future Enhancements sections that you want to help with? Did you find a bug? Do you want to help this fork become even more powerful than the original?
+Did you see something in the FAQ or the Future Enhancements sections that you want to help with? Did you find a bug?
 
-Excellent! Feel free to add your contributions through the standard means here on GitHub. I've done some Python 3 conversions for different modules before, but this was by far the most difficult of them so far. I'd love some help improving this module, cleaning up some old code, adding features, documentation, tests, or whatever you think could help.
+Excellent! Feel free to add your contributions through the standard means here on GitHub. I've done some Python 3 conversions for different modules before, but this was by far the most difficult of them so far. I'd love some help improving this module, cleaning up some old code, documentation, tests, or whatever you think could help.
